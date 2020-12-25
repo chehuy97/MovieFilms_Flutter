@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:moviefilm/ui/component/MovieAppBar.dart';
 import 'package:moviefilm/ui/favorite/FavoriteScreen.dart';
 import 'package:moviefilm/ui/home/HomeScreen.dart';
-import 'package:moviefilm/ui/infor/InforScreen.dart';
 import 'package:moviefilm/ui/settings/SettingScreen.dart';
 
 class MovieBottomBar extends StatefulWidget {
@@ -19,6 +18,17 @@ class _MovieBottomBarState extends State<MovieBottomBar> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
+    // Container(
+    //   child: MaterialApp(
+    //     home: HomeScreen(),
+    //     debugShowCheckedModeBanner: false,
+    //     initialRoute: '/home',
+    //     routes: {
+    //       '/home': (context) => HomeScreen(),
+    //       '/moviedetail': (context) => MovieDetail()
+    //     },
+    //   ),
+    // ),
     HomeScreen(),
     FavoriteScreen(),
     SettingScreen(),

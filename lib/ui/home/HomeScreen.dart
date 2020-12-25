@@ -1,8 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:moviefilm/model/Movie.dart';
-import 'package:moviefilm/ui/component/MovieAppBar.dart';
-import 'package:moviefilm/ui/component/MovieBottomBar.dart';
 import 'package:moviefilm/ui/component/MovieList.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';

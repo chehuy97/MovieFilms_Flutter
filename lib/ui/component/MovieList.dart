@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:moviefilm/model/Movie.dart';
-import 'package:moviefilm/ui/component/MovieBox.dart';
+import 'package:moviefilm/ui/component/cell/movie/TableMovieBox.dart';
+import 'package:moviefilm/ui/moviedetail/MovieDetail.dart';
 
-class MoviesList extends StatelessWidget{
+class MoviesList extends StatelessWidget {
   final List<Movie> listMovies;
 
-  MoviesList({Key key, this.listMovies}):super(key: key);
+  MoviesList({Key key, this.listMovies}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +15,13 @@ class MoviesList extends StatelessWidget{
     return ListView.builder(
       itemCount: listMovies.length,
       itemBuilder: (context, index) {
-        return Container(
-          child: MovieBox(
-            movie: listMovies[index],
+        return GestureDetector(
+          child: Container(
+            child: TableMovieBox(
+              movie: listMovies[index],
+            ),
           ),
+          onTap: null,
         );
       },
     );

@@ -7,17 +7,19 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      color: Colors.yellow,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.all(10),
-            child: SearchBox(),
-          )
-        ],
-      ),
-    );
+        width: double.infinity,
+        height: double.infinity,
+        child: Stack(
+          children: [
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: Column(
+                children: [SearchBox()],
+              ),
+            ),
+          ],
+        ));
   }
 }
